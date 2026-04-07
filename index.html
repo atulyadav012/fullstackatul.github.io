@@ -1,14 +1,469 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-app</title>
-    <script type="module" crossorigin src="/assets/index-H9MtBD-G.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ekluZPDg.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ScaloWeb - Professional web development company. 10+ projects delivered with 100% client satisfaction. Expert web development, API development, and maintenance services.">
+    <meta name="keywords" content="web development, web design, API development, website maintenance, startup web services">
+    <meta name="author" content="ScaloWeb">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="ScaloWeb - Build & Scale Your Web Applications">
+    <meta property="og:description" content="Professional web development services with 18+ years combined experience. 100% client satisfaction guaranteed.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/scaloweb/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ScaloWeb - Professional Web Development">
+    <meta name="twitter:description" content="Expert web development services for your business">
+
+    <title>ScaloWeb - Professional Web Development Company</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome (optional, for better icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .bg-gradient-dark {
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 100%);
+        }
+
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+        }
+
+        .hover-shadow {
+            transition: all 0.3s ease;
+        }
+
+            .hover-shadow:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.02) !important;
+            }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        .text-shadow {
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .text-shadow-sm {
+            text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+        }
+
+        .navbar.bg-dark-custom {
+            background-color: #0a0e1a !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .display-3 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark-custom py-3 transition-all" id="navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#" onclick="scrollToSection('hero'); return false;">
+                <div class="d-flex align-items-center">
+                    <div class="bg-primary text-white rounded-3 d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
+                        <span class="fs-5 fw-bold">S</span>
+                    </div>
+                    <span class="text-white">ScaloWeb</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link fw-semibold text-white" href="#" onclick="scrollToSection('services'); return false;">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-white" href="#" onclick="scrollToSection('about'); return false;">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-white" href="#" onclick="scrollToSection('blogs'); return false;">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-white" href="#" onclick="scrollToSection('faqs'); return false;">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-white" href="#" onclick="scrollToSection('contact'); return false;">Contact Us</a></li>
+                </ul>
+                <button class="btn btn-outline-light ms-lg-3 rounded-pill px-4" onclick="scrollToSection('contact')">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="position-relative overflow-hidden bg-gradient-dark" style="min-height: 85vh;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-20" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="container position-relative d-flex align-items-center" style="min-height: 85vh;">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-white">
+                    <div class="badge bg-primary bg-opacity-25 text-white rounded-pill px-4 py-2 mb-4">Premium Web Solutions</div>
+                    <h1 class="display-3 fw-bold mb-4 text-shadow">Build & Scale Your <span class="text-primary">Web Applications</span></h1>
+                    <p class="lead mb-4 text-shadow-sm opacity-95">18+ years combined experience delivering enterprise-grade web solutions that drive business growth.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button class="btn btn-primary btn-lg rounded-pill px-5" onclick="scrollToSection('contact')">Free Consultation</button>
+                        <button class="btn btn-outline-light btn-lg rounded-pill px-5" onclick="scrollToSection('services')">Explore Services</button>
+                    </div>
+                    <div class="mt-5 pt-3 d-flex gap-5 hero-stats">
+                        <div><span class="display-6 fw-bold">10+</span><p class="mb-0 opacity-75">Projects Delivered</p></div>
+                        <div><span class="display-6 fw-bold">100%</span><p class="mb-0 opacity-75">Client Satisfaction</p></div>
+                        <div><span class="display-6 fw-bold">24/7</span><p class="mb-0 opacity-75">Support Available</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-5 py-xl-6 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <div class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-4 py-2 mb-3">What We Offer</div>
+                <h2 class="display-5 fw-bold mb-3">Our Services</h2>
+                <p class="lead text-secondary w-75 mx-auto">Comprehensive web solutions tailored to your business needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition-all rounded-4 overflow-hidden">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary bg-opacity-10 rounded-3 d-inline-flex p-3 mb-4">
+                                <span class="display-6 text-primary">💻</span>
+                            </div>
+                            <h4 class="fw-bold mb-3">Web Development</h4>
+                            <p class="text-secondary mb-0">Modern, responsive websites with cutting-edge frameworks and best practices.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4 text-center">
+                            <a href="#" class="text-primary text-decoration-none fw-semibold" onclick="return false;">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition-all rounded-4 overflow-hidden">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-success bg-opacity-10 rounded-3 d-inline-flex p-3 mb-4">
+                                <span class="display-6 text-success">🔌</span>
+                            </div>
+                            <h4 class="fw-bold mb-3">API Development</h4>
+                            <p class="text-secondary mb-0">Scalable RESTful & GraphQL APIs for seamless integration.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4 text-center">
+                            <a href="#" class="text-success text-decoration-none fw-semibold" onclick="return false;">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition-all rounded-4 overflow-hidden">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-warning bg-opacity-10 rounded-3 d-inline-flex p-3 mb-4">
+                                <span class="display-6 text-warning">⚙️</span>
+                            </div>
+                            <h4 class="fw-bold mb-3">Maintenance</h4>
+                            <p class="text-secondary mb-0">24/7 monitoring, security updates, and performance optimization.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4 text-center">
+                            <a href="#" class="text-warning text-decoration-none fw-semibold" onclick="return false;">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition-all rounded-4 overflow-hidden">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-info bg-opacity-10 rounded-3 d-inline-flex p-3 mb-4">
+                                <span class="display-6 text-info">🚀</span>
+                            </div>
+                            <h4 class="fw-bold mb-3">Optimization</h4>
+                            <p class="text-secondary mb-0">Speed, SEO, and conversion rate optimization for maximum ROI.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4 text-center">
+                            <a href="#" class="text-info text-decoration-none fw-semibold" onclick="return false;">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-5 py-xl-6 bg-light">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <div class="bg-primary rounded-4 overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Team working together" class="img-fluid w-100" style="height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="position-absolute bottom-0 start-0 translate-middle bg-white rounded-3 shadow-lg p-3 d-flex gap-3">
+                            <div class="text-center px-3"><span class="h3 fw-bold text-primary">12+</span><p class="mb-0 small">Years Experience</p></div>
+                            <div class="vr"></div>
+                            <div class="text-center px-3"><span class="h3 fw-bold text-primary">6+</span><p class="mb-0 small">Years Experience</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-4 py-2 mb-3">Our Story</div>
+                    <h2 class="display-5 fw-bold mb-4">Where Expertise Meets Innovation</h2>
+                    <p class="lead text-secondary mb-4">Led by industry veterans with a passion for building exceptional digital experiences.</p>
+                    <div class="mb-4">
+                        <div class="d-flex gap-3 mb-3">
+                            <div class="flex-shrink-0"><div class="bg-primary rounded-circle p-2"><span class="text-white">✓</span></div></div>
+                            <div><h5 class="fw-bold mb-1">Atul Yadav</h5><p class="text-secondary mb-0">12+ years of full-stack architecture & team leadership</p></div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <div class="flex-shrink-0"><div class="bg-primary rounded-circle p-2"><span class="text-white">✓</span></div></div>
+                            <div><h5 class="fw-bold mb-1">Sarita Yadav</h5><p class="text-secondary mb-0">6+ years specializing in modern frontend & UX design</p></div>
+                        </div>
+                    </div>
+                    <p class="text-secondary mb-4">Together, we've helped startups and enterprises build scalable, reliable web applications that drive real business results.</p>
+                    <button class="btn btn-outline-primary rounded-pill px-5" onclick="scrollToSection('contact')">Work With Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOGS SECTION -->
+    <section id="blogs" class="py-5 py-xl-6 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <div class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-4 py-2 mb-3">Latest Insights</div>
+                <h2 class="display-5 fw-bold mb-3">From Our Blog</h2>
+                <p class="lead text-secondary w-75 mx-auto">Expert advice on web development, technology trends, and business growth</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition-all rounded-4 overflow-hidden">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between mb-3"><span class="badge bg-primary bg-opacity-10 text-primary">Trends</span><span class="small text-secondary">Jan 15, 2024</span></div>
+                            <h4 class="fw-bold mb-3">The Future of Web Development in 2024</h4>
+                            <p class="text-secondary mb-0">Explore emerging trends and technologies shaping the web landscape.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4"><a href="#" class="text-primary text-decoration-none fw-semibold" onclick="return false;">Read Article →</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition-all rounded-4 overflow-hidden">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between mb-3"><span class="badge bg-primary bg-opacity-10 text-primary">Performance</span><span class="small text-secondary">Jan 10, 2024</span></div>
+                            <h4 class="fw-bold mb-3">10 Tips for Optimizing Website Performance</h4>
+                            <p class="text-secondary mb-0">Practical strategies to boost your site speed and user experience.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4"><a href="#" class="text-primary text-decoration-none fw-semibold" onclick="return false;">Read Article →</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition-all rounded-4 overflow-hidden">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between mb-3"><span class="badge bg-primary bg-opacity-10 text-primary">Business</span><span class="small text-secondary">Jan 5, 2024</span></div>
+                            <h4 class="fw-bold mb-3">Why Your Business Needs a Custom Web App</h4>
+                            <p class="text-secondary mb-0">How tailored solutions give you competitive advantage.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4"><a href="#" class="text-primary text-decoration-none fw-semibold" onclick="return false;">Read Article →</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5"><button class="btn btn-outline-primary rounded-pill px-5" onclick="return false;">View All Articles</button></div>
+        </div>
+    </section>
+
+    <!-- FAQS SECTION -->
+    <section id="faqs" class="py-5 py-xl-6 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <div class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-4 py-2 mb-3">Common Questions</div>
+                <h2 class="display-5 fw-bold mb-3">Frequently Asked Questions</h2>
+                <p class="lead text-secondary w-75 mx-auto">Everything you need to know about working with us</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed bg-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What's your typical project timeline?</button></h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">Project timelines vary based on complexity. A standard website takes 4-6 weeks, while complex web applications may take 3-6 months. We'll provide a detailed timeline during consultation.</div></div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed bg-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Do you offer ongoing support?</button></h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">Yes! We provide comprehensive maintenance packages including 24/7 monitoring, security updates, backups, and technical support.</div></div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed bg-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What technologies do you specialize in?</button></h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">We work with React, Node.js, Python/Django, Laravel, Vue.js, and modern cloud platforms like AWS and Azure.</div></div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed bg-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">How do you handle project communication?</button></h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-secondary">We use tools like Slack, Trello, and weekly video calls to ensure transparent communication throughout the project.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-5 py-xl-6 bg-gradient-primary text-white">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <div class="badge bg-white bg-opacity-25 text-white rounded-pill px-4 py-2 mb-3">Get In Touch</div>
+                    <h2 class="display-5 fw-bold mb-4">Let's Build Something Great Together</h2>
+                    <p class="lead mb-4 opacity-90">Ready to transform your idea into a powerful web application? Schedule a free consultation today.</p>
+                    <div class="d-flex gap-3 mb-3"><div class="bg-white bg-opacity-20 rounded-circle p-2"><i class="fas fa-phone"></i></div><div><p class="mb-0 fw-bold">Phone</p><p class="mb-0 opacity-75">+1 (555) 123-4567</p></div></div>
+                    <div class="d-flex gap-3"><div class="bg-white bg-opacity-20 rounded-circle p-2"><i class="fas fa-envelope"></i></div><div><p class="mb-0 fw-bold">Email</p><p class="mb-0 opacity-75">hello@scaloweb.com</p></div></div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card border-0 rounded-4 shadow-lg">
+                        <div class="card-body p-4 p-lg-5">
+                            <h3 class="fw-bold text-dark mb-4">Request a Free Consultation</h3>
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6"><input type="text" class="form-control form-control-lg rounded-3" placeholder="Full Name" required></div>
+                                    <div class="col-md-6"><input type="email" class="form-control form-control-lg rounded-3" placeholder="Email Address" required></div>
+                                    <div class="col-12"><input type="tel" class="form-control form-control-lg rounded-3" placeholder="Phone Number"></div>
+                                    <div class="col-12"><textarea class="form-control form-control-lg rounded-3" rows="4" placeholder="Tell us about your project..."></textarea></div>
+                                    <div class="col-12"><button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill">Submit Request →</button></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary text-white rounded-3 d-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
+                            <span class="fs-5 fw-bold">S</span>
+                        </div>
+                        <span class="fs-4 fw-bold">ScaloWeb</span>
+                    </div>
+                    <p class="text-secondary">Crafting exceptional web experiences for businesses worldwide. Let's bring your vision to life.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none" onclick="scrollToSection('services'); return false;">Services</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none" onclick="scrollToSection('about'); return false;">About Us</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none" onclick="scrollToSection('blogs'); return false;">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-3">Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none" onclick="scrollToSection('faqs'); return false;">FAQs</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none" onclick="scrollToSection('contact'); return false;">Contact</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none" onclick="return false;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-3">Newsletter</h5>
+                    <p class="text-secondary">Get latest updates and insights.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="Your email">
+                        <button class="btn btn-primary" onclick="alert('Thank you for subscribing!')">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4">
+            <div class="text-center text-secondary"><small>© 2026 ScaloWeb. All rights reserved.</small></div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-sm');
+                navbar.classList.remove('bg-dark-custom');
+                // Change text colors
+                const navLinks = document.querySelectorAll('#navbar .nav-link');
+                navLinks.forEach(link => link.classList.remove('text-white'));
+                navLinks.forEach(link => link.classList.add('text-dark'));
+                const brandText = document.querySelector('#navbar .navbar-brand span');
+                if (brandText) brandText.classList.remove('text-white');
+                if (brandText) brandText.classList.add('text-dark');
+                const btn = document.querySelector('#navbar .btn-outline-light');
+                if (btn) {
+                    btn.classList.remove('btn-outline-light');
+                    btn.classList.add('btn-primary');
+                }
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-sm');
+                navbar.classList.add('bg-dark-custom');
+                const navLinks = document.querySelectorAll('#navbar .nav-link');
+                navLinks.forEach(link => link.classList.remove('text-dark'));
+                navLinks.forEach(link => link.classList.add('text-white'));
+                const brandText = document.querySelector('#navbar .navbar-brand span');
+                if (brandText) brandText.classList.remove('text-dark');
+                if (brandText) brandText.classList.add('text-white');
+                const btn = document.querySelector('#navbar .btn-primary');
+                if (btn) {
+                    btn.classList.remove('btn-primary');
+                    btn.classList.add('btn-outline-light');
+                }
+            }
+        });
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                const offset = 80;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            }
+        }
+
+        // Form submission handler
+        document.getElementById('contactForm')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            this.reset();
+        });
+
+        // Add scroll-margin for better anchor positioning
+        document.querySelectorAll('section').forEach(section => {
+            section.style.scrollMarginTop = '80px';
+        });
+    </script>
+</body>
 </html>
