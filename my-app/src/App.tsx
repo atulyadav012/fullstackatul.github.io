@@ -1,4 +1,4 @@
-import ScalowebLanding from "./ScalowebLanding";
+import ScalowebLanding from "./ScalowebLanding2";
 
 function App() {
   return <ScalowebLanding />;
